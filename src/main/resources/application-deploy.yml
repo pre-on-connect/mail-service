@@ -11,6 +11,12 @@ spring:
       bootstrap-servers: ${kafka_server_ip}
       group-id: ${kafka_group_id}
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${mail_username}
+    password: ${mail_password}
+
 logging:
   file:
     path: /var/log/spring
@@ -24,3 +30,5 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: ${public_ip}
+
+redis-url: ${redis_url}
